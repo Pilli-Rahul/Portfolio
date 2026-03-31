@@ -9,13 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
-<body class="min-h-screen bg-stone-950 text-stone-100 antialiased selection:bg-white/30 selection:text-white">
-  <div class="fixed inset-0 -z-10 overflow-hidden">
-    <div class="absolute -left-28 top-10 h-72 w-72 rounded-full bg-orange-500/20 blur-3xl"></div>
-    <div class="absolute right-0 top-40 h-80 w-80 rounded-full bg-white/15 blur-3xl"></div>
-    <div class="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-teal-400/10 blur-3xl"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_42%)]"></div>
-  </div>
+<body class="min-h-screen bg-black text-stone-100 antialiased selection:bg-white/30 selection:text-white">
+  <div class="fixed inset-0 -z-10 bg-black"></div>
 
   <div class="mx-auto w-full max-w-6xl px-6 pb-14 pt-8 sm:px-10 lg:px-16 lg:pt-14">
     <main class="snap-y snap-mandatory space-y-0">
@@ -34,39 +29,51 @@
 
       <section id="skills" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center">
         <div class="w-full rounded-3xl border border-stone-700/70 bg-stone-900/60 p-6 backdrop-blur-sm sm:p-8">
-          <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-white">Skills</p>
-          <div class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">HTML5</p>
+          <p class="font-['Space_Mono'] text-sm uppercase tracking-[0.2em] text-white sm:text-base">My Skills</p>
+          <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">HTML5</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">CSS3</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">CSS3</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">JavaScript</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">JavaScript</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">Tailwind</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">Tailwind</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">Node.js</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">Node.js</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express icon" class="mx-auto h-11 w-11 rounded bg-white p-1" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">Express</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express icon" class="mx-auto h-9 w-9 rounded bg-white p-1" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">Express</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">MongoDB</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">MongoDB</p>
             </div>
-            <div class="group rounded-2xl border border-stone-700 bg-stone-900/70 p-4 text-center transition hover:-translate-y-1 hover:border-white/60">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon" class="mx-auto h-11 w-11" loading="lazy" />
-              <p class="mt-3 text-sm font-semibold text-stone-200">Python</p>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">Python</p>
+            </div>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">React</p>
+            </div>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS icon" class="mx-auto h-9 w-9 object-contain" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">AWS</p>
+            </div>
+            <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel icon" class="mx-auto h-9 w-9" loading="lazy" />
+              <p class="mt-2 text-base font-semibold text-stone-200">Vercel</p>
             </div>
           </div>
         </div>
@@ -78,11 +85,11 @@
 
         <div class="grid gap-4 lg:grid-cols-2">
           <article data-tilt class="group h-full rounded-3xl border border-stone-700/70 bg-stone-900/65 p-5 transition duration-300 hover:-translate-y-1 hover:border-white/50 sm:p-6">
-            <div class="relative mb-5 overflow-hidden rounded-2xl border border-stone-700">
-              <img src="images/sticky-notes.png" alt="Sticky Notes App dashboard preview" class="h-56 w-full object-cover object-top transition duration-500 group-hover:scale-105" loading="lazy" />
+            <a href="https://sticky-notes-app-olive.vercel.app/login" target="_blank" rel="noreferrer" aria-label="Open Sticky Notes App" class="relative mb-5 block cursor-pointer overflow-hidden rounded-2xl border border-stone-700 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <img src="images/sticky-notes.png" alt="Sticky Notes App dashboard preview" class="h-56 w-full object-cover object-top transition duration-500 group-hover:scale-110" loading="lazy" />
               <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-900/20 to-transparent"></div>
               <span class="absolute bottom-3 left-3 rounded-full bg-stone-900/85 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-white">Full Stack</span>
-            </div>
+            </a>
 
             <h3 class="font-['Sora'] text-2xl font-semibold text-stone-100">Sticky Notes App</h3>
             <p class="mt-2 text-sm leading-7 text-stone-300">
