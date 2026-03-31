@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body class="min-h-screen bg-black text-stone-100 antialiased selection:bg-white/30 selection:text-white">
-  <div class="fixed inset-0 -z-10 bg-black"></div>
-
   <div class="mx-auto w-full max-w-6xl px-6 pb-14 pt-8 sm:px-10 lg:px-16 lg:pt-14">
     <main class="snap-y snap-mandatory space-y-0">
       <section id="hero" class="flex h-screen snap-start scroll-mt-24 items-center justify-center">
@@ -27,9 +25,9 @@
         </p>
       </section>
 
-      <section id="skills" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center">
+      <section id="skills" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center justify-center text-center">
         <div class="w-full rounded-3xl border border-stone-700/70 bg-stone-900/60 p-6 backdrop-blur-sm sm:p-8">
-          <p class="font-['Space_Mono'] text-sm uppercase tracking-[0.2em] text-white sm:text-base">My Skills</p>
+          <p data-skills-typed class="font-['Space_Mono'] text-2xl font-bold uppercase tracking-[0.24em] text-white sm:text-4xl lg:text-5xl">My Skills</p>
           <div class="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             <div class="group rounded-2xl bg-stone-900/70 p-3 text-center transition hover:-translate-y-1">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML icon" class="mx-auto h-9 w-9" loading="lazy" />
@@ -79,12 +77,12 @@
         </div>
       </section>
 
-      <section id="projects" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center">
-        <div class="w-full space-y-4">
-        <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-white">Projects</p>
+      <section id="projects" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center justify-center text-center">
+        <div class="w-full space-y-6">
+        <p data-projects-typed class="font-['Space_Mono'] text-2xl font-bold uppercase tracking-[0.24em] text-white sm:text-4xl lg:text-5xl">Projects</p>
 
-        <div class="grid gap-4 lg:grid-cols-2">
-          <article data-tilt class="group h-full rounded-3xl border border-stone-700/70 bg-stone-900/65 p-5 transition duration-300 hover:-translate-y-1 hover:border-white/50 sm:p-6">
+        <div class="grid gap-4 text-left lg:grid-cols-2">
+          <article class="group h-full rounded-3xl border border-stone-700/70 bg-stone-900/65 p-5 transition duration-300 hover:-translate-y-1 hover:border-white/50 sm:p-6">
             <a href="https://sticky-notes-app-olive.vercel.app/login" target="_blank" rel="noreferrer" aria-label="Open Sticky Notes App" class="relative mb-5 block cursor-pointer overflow-hidden rounded-2xl border border-stone-700 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <img src="images/sticky-notes.png" alt="Sticky Notes App dashboard preview" class="h-56 w-full object-cover object-top transition duration-500 group-hover:scale-110" loading="lazy" />
               <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-900/20 to-transparent"></div>
@@ -110,7 +108,7 @@
             </div>
           </article>
 
-          <article data-tilt class="group h-full rounded-3xl border border-stone-700/70 bg-stone-900/65 p-5 transition duration-300 hover:-translate-y-1 hover:border-white/50 sm:p-6">
+          <article class="group h-full rounded-3xl border border-stone-700/70 bg-stone-900/65 p-5 transition duration-300 hover:-translate-y-1 hover:border-white/50 sm:p-6">
             <h3 class="font-['Sora'] text-2xl font-semibold text-stone-100">Fake News Detection</h3>
             <p class="mt-2 text-sm leading-7 text-stone-300">
               A machine learning application that predicts whether a news article is fake or real using NLP and a trained classification model.
@@ -132,43 +130,55 @@
         </div>
       </section>
 
-      <section id="education" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center">
-        <div class="w-full rounded-3xl border border-stone-700/70 bg-stone-900/60 p-7 sm:p-9">
-          <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-white">Education</p>
-          <div class="mt-4 space-y-3 text-stone-300">
-            <p class="font-['Sora'] text-xl font-semibold text-stone-100">B.Tech</p>
-            <p>CGPA: 8.1</p>
-            <p>Intermediate: 97.4%</p>
-            <p>10th GPA: 10</p>
-          </div>
+      <section id="experience" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center justify-center text-center">
+        <div class="w-full">
+          <p data-experience-typed class="font-['Space_Mono'] text-2xl font-bold uppercase tracking-[0.24em] text-white sm:text-4xl lg:text-5xl">Experience</p>
+          <h2 class="mt-5 font-['Sora'] text-4xl font-extrabold text-stone-100 sm:text-5xl lg:text-6xl">Work and Practical Exposure</h2>
+
+          <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-stone-300 sm:text-lg">Experience details will be updated soon.</p>
         </div>
       </section>
 
-      <section id="contact" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center">
+      <section id="contact" data-reveal class="flex h-screen snap-start scroll-mt-24 items-center justify-center text-center">
         <div class="w-full rounded-3xl border border-stone-700/70 bg-stone-900/60 p-7 sm:p-9">
-          <p class="font-['Space_Mono'] text-xs uppercase tracking-[0.2em] text-white">Contact</p>
-          <p class="mt-4 max-w-2xl text-sm leading-7 text-stone-300">
-            I am actively looking for placements and internships. If you have an opportunity, I would love to connect.
-          </p>
+          <div class="grid items-center gap-8">
+            <div>
+              <p data-contact-typed class="font-['Space_Mono'] text-2xl font-bold uppercase tracking-[0.24em] text-white sm:text-4xl lg:text-5xl">Contact</p>
+              <p class="mt-3 font-['Sora'] text-2xl font-semibold tracking-[0.08em] text-stone-100 sm:text-3xl">PILLI RAHUL</p>
 
-          <form id="contactForm" class="mt-6 space-y-4">
-            <input type="text" id="name" placeholder="Your name" class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-sm text-stone-100 outline-none transition focus:border-white/70" required />
-            <input type="email" id="email" placeholder="Your email" class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-sm text-stone-100 outline-none transition focus:border-white/70" required />
-            <textarea id="message" rows="5" placeholder="Your message" class="w-full rounded-2xl border border-stone-700 bg-stone-950/70 px-4 py-3 text-sm text-stone-100 outline-none transition focus:border-white/70" required></textarea>
-            <button type="submit" class="rounded-full bg-white px-6 py-3 text-sm font-bold text-stone-950 transition hover:bg-stone-200">Send Message</button>
-          </form>
-
-          <p id="status" class="mt-4 text-sm text-white"></p>
+              <div class="mx-auto mt-6 grid max-w-xl gap-3 sm:grid-cols-3">
+                <a href="mailto:rahulpilli134@gmail.com" aria-label="Email Rahul" class="group flex items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-stone-950/60 px-4 py-4 text-stone-200 transition hover:-translate-y-1 hover:border-rose-300/80 hover:bg-rose-50/10 hover:text-white">
+                  <span class="rounded-full border border-stone-600 p-2 transition group-hover:border-rose-200/70">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.75 12 13l9-5.25M4.2 6h15.6c.99 0 1.8.81 1.8 1.8v8.4c0 .99-.81 1.8-1.8 1.8H4.2c-.99 0-1.8-.81-1.8-1.8V7.8C2.4 6.81 3.21 6 4.2 6Z"></path>
+                    </svg>
+                  </span>
+                  <span class="font-['Space_Mono'] text-xs font-bold uppercase tracking-[0.18em]">Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rahul-pilli-306878291" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" class="group flex items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-stone-950/60 px-4 py-4 text-stone-200 transition hover:-translate-y-1 hover:border-sky-300/80 hover:bg-sky-50/10 hover:text-white">
+                  <span class="rounded-full border border-stone-600 p-2 transition group-hover:border-sky-200/70">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                      <path d="M6.9 8.6a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5Zm-1.5 1.3h3v9.5h-3V9.9Zm4.8 0h2.9v1.4h.04c.4-.75 1.37-1.54 2.83-1.54 3.03 0 3.59 1.99 3.59 4.58v5.06h-3v-4.48c0-1.07-.02-2.45-1.5-2.45s-1.73 1.16-1.73 2.37v4.56h-3V9.9Z"></path>
+                    </svg>
+                  </span>
+                  <span class="font-['Space_Mono'] text-xs font-bold uppercase tracking-[0.18em]">LinkedIn</span>
+                </a>
+                <a href="https://github.com/Pilli-Rahul" target="_blank" rel="noreferrer" aria-label="GitHub profile" class="group flex items-center justify-center gap-3 rounded-2xl border border-stone-700 bg-stone-950/60 px-4 py-4 text-stone-200 transition hover:-translate-y-1 hover:border-violet-300/80 hover:bg-violet-50/10 hover:text-white">
+                  <span class="rounded-full border border-stone-600 p-2 transition group-hover:border-violet-200/70">
+                    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.61-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.84.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.93 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.56 1.37.21 2.39.1 2.64.64.69 1.03 1.58 1.03 2.67 0 3.83-2.33 4.67-4.56 4.92.36.31.68.93.68 1.88v2.78c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path>
+                    </svg>
+                  </span>
+                  <span class="font-['Space_Mono'] text-xs font-bold uppercase tracking-[0.18em]">GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <footer class="snap-start space-y-4 pb-2 text-xs uppercase tracking-[0.16em] text-stone-500">
         <p>Built by Rahul Pilli.</p>
-        <div class="flex gap-5 text-sm normal-case tracking-normal text-stone-300">
-          <a href="https://github.com/Pilli-Rahul" target="_blank" rel="noreferrer" class="transition hover:text-white">GitHub</a>
-          <a href="https://www.linkedin.com/in/rahul-pilli-306878291" target="_blank" rel="noreferrer" class="transition hover:text-white">LinkedIn</a>
-          <a href="mailto:rahulpilli134@gmail.com" class="transition hover:text-white">Email</a>
-        </div>
       </footer>
     </main>
   </div>

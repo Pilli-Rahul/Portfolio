@@ -1,46 +1,35 @@
-const sections = [...document.querySelectorAll("main section[id]")];
-const navLinks = [...document.querySelectorAll("[data-nav-link]")];
 const revealSections = [...document.querySelectorAll("[data-reveal]")];
+const typedHeadingConfig = [
+  { sectionId: "skills", selector: "[data-skills-typed]", text: "My Skills" },
+  { sectionId: "projects", selector: "[data-projects-typed]", text: "Projects" },
+  { sectionId: "experience", selector: "[data-experience-typed]", text: "Experience" },
+  { sectionId: "contact", selector: "[data-contact-typed]", text: "Contact" },
+];
 
-// Highlight the nav item that matches the section currently in view.
-function setActiveLink(sectionId) {
-  navLinks.forEach((link) => {
-    const isMatch = link.getAttribute("href") === `#${sectionId}`;
-    const line = link.querySelector("[data-nav-line]");
+const typedHeadingState = new Map();
 
-    link.classList.toggle("text-white", isMatch);
-    link.classList.toggle("text-stone-400", !isMatch);
-    link.classList.toggle("translate-x-1", isMatch);
-
-    if (line) {
-      line.classList.toggle("w-16", isMatch);
-      line.classList.toggle("bg-white", isMatch);
-      line.classList.toggle("w-8", !isMatch);
-      line.classList.toggle("bg-stone-600", !isMatch);
-    }
-  });
-}
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    const visibleEntries = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-    if (visibleEntries.length > 0) {
-      setActiveLink(visibleEntries[0].target.id);
-    }
-  },
-  {
-    rootMargin: "-35% 0px -45% 0px",
-    threshold: [0.2, 0.4, 0.6],
+function playTypingEffect(sectionId, textElement, finalText) {
+  const state = typedHeadingState.get(sectionId);
+  if (!state || !textElement) {
+    return;
   }
-);
 
-sections.forEach((section) => observer.observe(section));
+  if (state.timer) {
+    clearInterval(state.timer);
+  }
 
-if (sections.length > 0) {
-  setActiveLink(sections[0].id);
+  let charIndex = 0;
+  textElement.textContent = "";
+
+  state.timer = setInterval(() => {
+    charIndex += 1;
+    textElement.textContent = finalText.slice(0, charIndex);
+
+    if (charIndex >= finalText.length) {
+      clearInterval(state.timer);
+      state.timer = null;
+    }
+  }, 90);
 }
 
 const revealObserver = new IntersectionObserver(
@@ -61,6 +50,40 @@ const revealObserver = new IntersectionObserver(
 revealSections.forEach((section) => {
   section.classList.add("opacity-0", "translate-y-8", "transition", "duration-700", "ease-out");
   revealObserver.observe(section);
+});
+
+typedHeadingConfig.forEach(({ sectionId, selector, text }) => {
+  const sectionElement = document.getElementById(sectionId);
+  const textElement = document.querySelector(selector);
+
+  if (!sectionElement || !textElement) {
+    return;
+  }
+
+  typedHeadingState.set(sectionId, { inView: false, timer: null });
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const state = typedHeadingState.get(sectionId);
+        if (!state) {
+          return;
+        }
+
+        if (entry.isIntersecting && !state.inView) {
+          state.inView = true;
+          playTypingEffect(sectionId, textElement, text);
+        } else if (!entry.isIntersecting) {
+          state.inView = false;
+        }
+      });
+    },
+    {
+      threshold: 0.55,
+    }
+  );
+
+  sectionObserver.observe(sectionElement);
 });
 
 const form = document.getElementById("contactForm");
